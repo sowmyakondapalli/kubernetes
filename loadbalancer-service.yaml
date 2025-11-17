@@ -15,7 +15,7 @@ spec:
 ---
 
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   data: lb-service
 spec:
@@ -27,4 +27,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      
+
