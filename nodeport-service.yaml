@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: nodeport-Service
   labels:
-    name: my-app
+    app: my-app
     environment: dev
 spec:
   containers:
@@ -19,12 +19,12 @@ kind: Service
 metadata:
   name: np-Service
 spec:
-  type: nodePort
+  type: NodePort
   selector:
-    name: my-app
+    app: my-app
     environment: dev
   ports:
-    - protocol: 
+    - protocol: TCP
       port: 80
       targetPort: 80
       nodePort: 30080 
