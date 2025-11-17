@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: pod-creation
+  labels:
+    environment: devlopment
+spec:
+  containers:
+    -name: nginxcont
+    image: nginx
+    ports:
+      - containerPort: 80
+      
