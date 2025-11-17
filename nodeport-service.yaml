@@ -9,7 +9,7 @@ spec:
   containers:
     - name: nginxcont
       image: nginx
-      port:
+      ports:
       - containerPort: 80
 
 ---
