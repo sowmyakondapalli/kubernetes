@@ -3,7 +3,7 @@ kind: Pod
 metadata: 
   name: pod-creation
   labels:
-    app: nginx
+    app: my-app
     environment: devlopment
 spec:
   containers:
@@ -20,7 +20,7 @@ metadata:
   name: newservice
 spec:
   selector:
-    app: nginx
+    app: my-app
     environment: devlopment
     ports:
       - protocol: TCP
