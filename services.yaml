@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: pod-creation
+  labels:
+    app: nginx
+    environment: devlopment
+spec:
+  containers:
+    - name: mycontainer
+      image: nginx
+      ports:
+      - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: newservice
+spec:
+  selector:
+    app: nginx
+    environment: devlopment
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 80
