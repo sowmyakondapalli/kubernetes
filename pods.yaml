@@ -6,8 +6,8 @@ metadata:
     environment: devlopment
 spec:
   containers:
-    -name: nginxcont
-    image: nginx
-    ports:
+    - name: mycontainer
+      image: nginx
+      ports:
       - containerPort: 80
       
